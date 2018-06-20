@@ -31,6 +31,9 @@
 		F7A6D78820D8164100D86B33 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A6D78720D8164100D86B33 /* CloudKit.framework */; };
 		F7A6D78A20D838FE00D86B33 /* background.gif in Resources */ = {isa = PBXBuildFile; fileRef = F7A6D78920D838FD00D86B33 /* background.gif */; };
 		F7A6D78C20D8464500D86B33 /* KeyBoardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6D78B20D8464500D86B33 /* KeyBoardExtension.swift */; };
+		F7A6D79020D9AB1B00D86B33 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A6D78F20D9AB1B00D86B33 /* MapKit.framework */; };
+		F7A6D79220D9AEE800D86B33 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6D79120D9AEE800D86B33 /* MapViewController.swift */; };
+		F7A6D79620D9C2E600D86B33 /* LocationSearchTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6D79520D9C2E600D86B33 /* LocationSearchTableController.swift */; };
 		F7BCB63320D41DF8006C4573 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCB63220D41DF8006C4573 /* SummaryCell.swift */; };
 		F7BCB63520D41E0B006C4573 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCB63420D41E0A006C4573 /* NotesCell.swift */; };
 		F7BCB63920D7250F006C4573 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7BCB63720D7250F006C4573 /* Model.xcdatamodeld */; };
@@ -68,6 +71,9 @@
 		F7A6D78720D8164100D86B33 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F7A6D78920D838FD00D86B33 /* background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = background.gif; path = ../../../../background.gif; sourceTree = "<group>"; };
 		F7A6D78B20D8464500D86B33 /* KeyBoardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyBoardExtension.swift; sourceTree = "<group>"; };
+		F7A6D78F20D9AB1B00D86B33 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F7A6D79120D9AEE800D86B33 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		F7A6D79520D9C2E600D86B33 /* LocationSearchTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableController.swift; sourceTree = "<group>"; };
 		F7BCB63220D41DF8006C4573 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 		F7BCB63420D41E0A006C4573 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		F7BCB63820D7250F006C4573 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -82,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F7A6D79020D9AB1B00D86B33 /* MapKit.framework in Frameworks */,
 				F7A6D78820D8164100D86B33 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,6 +175,8 @@
 				F75C0B1D20C5B0F7002FD5E6 /* WineSearchViewController.swift */,
 				F789556720C8556B0017AF3D /* AddWineViewController.swift */,
 				F789555F20C845610017AF3D /* WineCellarViewController.swift */,
+				F7A6D79120D9AEE800D86B33 /* MapViewController.swift */,
+				F7A6D79520D9C2E600D86B33 /* LocationSearchTableController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -193,6 +202,7 @@
 		F7A6D78620D8164100D86B33 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F7A6D78F20D9AB1B00D86B33 /* MapKit.framework */,
 				F7A6D78720D8164100D86B33 /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -250,6 +260,9 @@
 					F75C0AFF20C597D4002FD5E6 = {
 						CreatedOnToolsVersion = 9.4;
 						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -314,11 +327,13 @@
 				F75C0B1C20C5A3EE002FD5E6 /* WineCell.swift in Sources */,
 				F75C0B1E20C5B0F7002FD5E6 /* WineSearchViewController.swift in Sources */,
 				F75C0B2220C5D5DB002FD5E6 /* BeverageController .swift in Sources */,
+				F7A6D79620D9C2E600D86B33 /* LocationSearchTableController.swift in Sources */,
 				F789556620C84B9D0017AF3D /* WineController .swift in Sources */,
 				F75C0B1820C59A60002FD5E6 /* CustomTabBarView.swift in Sources */,
 				F789556820C8556B0017AF3D /* AddWineViewController.swift in Sources */,
 				F789556020C845610017AF3D /* WineCellarViewController.swift in Sources */,
 				F789556A20C89C8C0017AF3D /* LoginViewController.swift in Sources */,
+				F7A6D79220D9AEE800D86B33 /* MapViewController.swift in Sources */,
 				F7BCB64220D80725006C4573 /* UserController .swift in Sources */,
 				F7BCB63520D41E0B006C4573 /* NotesCell.swift in Sources */,
 				F7A6D78320D8117F00D86B33 /* ReturningUserViewController.swift in Sources */,
