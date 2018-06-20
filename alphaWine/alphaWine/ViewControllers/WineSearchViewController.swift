@@ -49,7 +49,7 @@ class WineSearchViewController: UIViewController, UISearchBarDelegate, UITableVi
                 DispatchQueue.main.async {
                     self.beverages = beverages
                     if beverages.count == 0 {
-                        let alertController = UIAlertController(title: "No items found", message: "GrapeFind's search didn't find \(searchTerm) in our 500,000+ wine list, we recommend to double check spelling", preferredStyle: .alert)
+                        let alertController = UIAlertController(title: "No items found", message: "GrapeFind's search didn't find \(searchTerm) in our 8,700 + wine list, we recommend to double check spelling", preferredStyle: .alert)
                         let cancelActionItem = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
                         alertController.addAction(cancelActionItem)
                         
@@ -165,10 +165,8 @@ extension UIScrollView {
     func scrollToTop(animated: Bool) {
     let topOffset = CGPoint(x: 0, y: -contentInset.top)
     setContentOffset(topOffset, animated: animated)
-}
+    }
 }
 
 
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=parameters
-// https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Museum%20of%20Contemporary%20Art%20Australia&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCpdxL0CNdZUeKMI175evq8gi6nWWMZf0w
-//  https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=e&jgallowwinnery&inputtype=textquery&fields=photos,formatted_address,name,rating,opening_hours,geometry&key=AIzaSyCpdxL0CNdZUeKMI175evq8gi6nWWMZf0w
+

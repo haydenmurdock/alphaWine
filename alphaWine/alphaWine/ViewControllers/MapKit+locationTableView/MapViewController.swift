@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
@@ -17,32 +18,45 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: MKMapView!
     
-        
+        let regionRadius: CLLocationDistance = 1000
         var selectedPin:MKPlacemark? = nil
         
         var resultSearchController:UISearchController? = nil
         
         let locationManager = CLLocationManager()
+    
+    var beverage: Beverage?
+        
+
+ 
         
         override func viewDidLoad() {
             super.viewDidLoad()
+           
             locationManager.delegate = self
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestWhenInUseAuthorization()
             locationManager.requestLocation()
+            locationManager.startUpdatingLocation()
+            let location = locationManager.location
+            centerMapOnLocation(location: location!)
             mapView.delegate = self
             let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTableController
             resultSearchController = UISearchController(searchResultsController: locationSearchTable)
             resultSearchController?.searchResultsUpdater = locationSearchTable
             let searchBar = resultSearchController!.searchBar
+            searchBar.placeholder = "Enter Winery"
             searchBar.sizeToFit()
-            searchBar.placeholder = "Search for places"
+            searchBar.text = beverage?.producer_name
             navigationItem.titleView = resultSearchController?.searchBar
             resultSearchController?.hidesNavigationBarDuringPresentation = false
             resultSearchController?.dimsBackgroundDuringPresentation = true
             definesPresentationContext = true
             locationSearchTable.mapView = mapView
             locationSearchTable.handleMapSearchDelegate = self
+        
         }
         
        @objc func getDirections(){
@@ -52,7 +66,13 @@ class MapViewController: UIViewController {
                 mapItem.openInMaps(launchOptions: launchOptions)
             }
         }
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius, regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
     }
+    
+}
     
     extension MapViewController : CLLocationManagerDelegate {
         func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
@@ -66,10 +86,8 @@ class MapViewController: UIViewController {
         }
         
         func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-            
-            if locations.first != nil {
-                print("location:: (location)")
-            }
+            guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+            print("locations = \(locValue.latitude) \(locValue.longitude)")
             
         }
 
