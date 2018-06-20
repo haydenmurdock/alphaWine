@@ -12,11 +12,11 @@ class BeverageController {
     
     static let shared = BeverageController()
     
-    func fetchBeverage(with searchTerm: String, completion: @escaping ([Beverage]?)->Void){
+    func fetchBeverage(with searchTerm: String,with pageNumber: Int, completion: @escaping ([Beverage]?)->Void){
         
       let trimmedString = searchTerm.replacingOccurrences(of: " ", with: "")
         
-        let newURL = URL(string:"https:lcboapi.com/products?access_key=MDpmOTEyMjhiOC02ODJmLTExZTgtOTVmNS1iM2MwZjI5N2Y0NDk6dUJoc0FyN1NtSmlBbjlsN3dVQ1VmYUhXVGZudEVhNjZ0WjZk&q=wine+\(trimmedString)")!
+        let newURL = URL(string:"https:lcboapi.com/products?&access_key=MDpmOTEyMjhiOC02ODJmLTExZTgtOTVmNS1iM2MwZjI5N2Y0NDk6dUJoc0FyN1NtSmlBbjlsN3dVQ1VmYUhXVGZudEVhNjZ0WjZk&q=wine+\(trimmedString)&page=\(pageNumber)&per_page=40")!
         print("\(newURL)")
         
         let dataTask = URLSession.shared.dataTask(with: newURL) { (data, _, error) in
@@ -27,7 +27,7 @@ class BeverageController {
                 let beverages = decodedObject.result
                 completion(beverages)
             } catch let error {
-                    print(error.localizedDescription)
+                print("There was an error decoding the data: \(error.localizedDescription)")
                     completion(nil)
             }
         }
@@ -35,7 +35,7 @@ class BeverageController {
     dataTask.resume()
 }
     func fetchBeverageImage(with beverage: Beverage, completion: @escaping(UIImage?)->Void) {
-     let url = beverage.image_url
+        guard let url = beverage.image_url else { return }
         let datatask = URLSession.shared.dataTask(with: url) { (data, _, error) in
             if let data = data {
                 let image = UIImage(data: data)

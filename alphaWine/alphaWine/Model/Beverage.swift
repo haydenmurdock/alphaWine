@@ -13,14 +13,14 @@ struct JSONDictionary: Decodable {
 }
 
 struct Beverage: Decodable {
-    let name: String
-    let serving_suggestion: String
-    let tasting_note: String
-    let price_in_cents: Int
-    let style: String
-    let sugar_in_grams_per_liter: Int
-    let producer_name: String
-    let secondary_category: String
-    var image_url: URL
+    let name: String?
+    let serving_suggestion: String?
+    let tasting_note: String?
+    let price_in_cents: Double?
+    let style: String?
+    let sugar_in_grams_per_liter: Int?
+    let producer_name: String?
+    let secondary_category: String?
+    var image_url: URL?
     
 }
