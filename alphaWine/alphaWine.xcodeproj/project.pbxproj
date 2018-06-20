@@ -11,7 +11,6 @@
 		F75C0B0920C597D4002FD5E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75C0B0720C597D4002FD5E6 /* Main.storyboard */; };
 		F75C0B0B20C597D5002FD5E6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F75C0B0A20C597D5002FD5E6 /* Assets.xcassets */; };
 		F75C0B0E20C597D5002FD5E6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F75C0B0C20C597D5002FD5E6 /* LaunchScreen.storyboard */; };
-		F75C0B1820C59A60002FD5E6 /* CustomTabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C0B1720C59A60002FD5E6 /* CustomTabBarView.swift */; };
 		F75C0B1C20C5A3EE002FD5E6 /* WineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C0B1B20C5A3EE002FD5E6 /* WineCell.swift */; };
 		F75C0B1E20C5B0F7002FD5E6 /* WineSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C0B1D20C5B0F7002FD5E6 /* WineSearchViewController.swift */; };
 		F75C0B2020C5D4E9002FD5E6 /* Beverage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75C0B1F20C5D4E9002FD5E6 /* Beverage.swift */; };
@@ -34,6 +33,9 @@
 		F7A6D79020D9AB1B00D86B33 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A6D78F20D9AB1B00D86B33 /* MapKit.framework */; };
 		F7A6D79220D9AEE800D86B33 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6D79120D9AEE800D86B33 /* MapViewController.swift */; };
 		F7A6D79620D9C2E600D86B33 /* LocationSearchTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6D79520D9C2E600D86B33 /* LocationSearchTableController.swift */; };
+		F7B7428F20DACF4F002BD0AE /* RandomWineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7428E20DACF4E002BD0AE /* RandomWineViewController.swift */; };
+		F7B7429220DAE1F4002BD0AE /* RandomWineOverviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7429120DAE1F4002BD0AE /* RandomWineOverviewCell.swift */; };
+		F7B7429420DAE21A002BD0AE /* RandomWinePairsWithCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7B7429320DAE21A002BD0AE /* RandomWinePairsWithCell.swift */; };
 		F7BCB63320D41DF8006C4573 /* SummaryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCB63220D41DF8006C4573 /* SummaryCell.swift */; };
 		F7BCB63520D41E0B006C4573 /* NotesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BCB63420D41E0A006C4573 /* NotesCell.swift */; };
 		F7BCB63920D7250F006C4573 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F7BCB63720D7250F006C4573 /* Model.xcdatamodeld */; };
@@ -50,7 +52,6 @@
 		F75C0B0A20C597D5002FD5E6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F75C0B0D20C597D5002FD5E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F75C0B0F20C597D5002FD5E6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F75C0B1720C59A60002FD5E6 /* CustomTabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarView.swift; sourceTree = "<group>"; };
 		F75C0B1B20C5A3EE002FD5E6 /* WineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineCell.swift; sourceTree = "<group>"; };
 		F75C0B1D20C5B0F7002FD5E6 /* WineSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WineSearchViewController.swift; sourceTree = "<group>"; };
 		F75C0B1F20C5D4E9002FD5E6 /* Beverage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beverage.swift; sourceTree = "<group>"; };
@@ -74,6 +75,10 @@
 		F7A6D78F20D9AB1B00D86B33 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		F7A6D79120D9AEE800D86B33 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		F7A6D79520D9C2E600D86B33 /* LocationSearchTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchTableController.swift; sourceTree = "<group>"; };
+		F7B7428E20DACF4E002BD0AE /* RandomWineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWineViewController.swift; sourceTree = "<group>"; };
+		F7B7429120DAE1F4002BD0AE /* RandomWineOverviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWineOverviewCell.swift; sourceTree = "<group>"; };
+		F7B7429320DAE21A002BD0AE /* RandomWinePairsWithCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomWinePairsWithCell.swift; sourceTree = "<group>"; };
+		F7B7429820DAFBEF002BD0AE /* background.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = background.gif; sourceTree = "<group>"; };
 		F7BCB63220D41DF8006C4573 /* SummaryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryCell.swift; sourceTree = "<group>"; };
 		F7BCB63420D41E0A006C4573 /* NotesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesCell.swift; sourceTree = "<group>"; };
 		F7BCB63820D7250F006C4573 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -122,12 +127,8 @@
 				F75C0B2720C60A5E002FD5E6 /* ModelControllers */,
 				F75C0B2820C60A6A002FD5E6 /* ViewControllers */,
 				F75C0B2520C60A4C002FD5E6 /* Views */,
-				F75C0B0A20C597D5002FD5E6 /* Assets.xcassets */,
+				F7B7429720DAFBED002BD0AE /* resources */,
 				F7A6D78920D838FD00D86B33 /* background.gif */,
-				F789556B20C89F460017AF3D /* UIImage+Gif.swift */,
-				F7A6D78B20D8464500D86B33 /* KeyBoardExtension.swift */,
-				F75C0B0C20C597D5002FD5E6 /* LaunchScreen.storyboard */,
-				F75C0B0F20C597D5002FD5E6 /* Info.plist */,
 			);
 			path = alphaWine;
 			sourceTree = "<group>";
@@ -135,12 +136,10 @@
 		F75C0B2520C60A4C002FD5E6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				F7913B7D20CB19A500AEB366 /* OverviewTableViewCell.swift */,
+				F7B7429020DAE198002BD0AE /* SearchedWineCells */,
 				F7BCB63620D41E15006C4573 /* WineCellarCells */,
-				F75C0B1720C59A60002FD5E6 /* CustomTabBarView.swift */,
-				F789556120C847890017AF3D /* CellarCollectionViewCell.swift */,
+				F7B7429520DAE3E9002BD0AE /* RandomWineCells */,
 				F75C0B1B20C5A3EE002FD5E6 /* WineCell.swift */,
-				F7913B8320CB39BF00AEB366 /* PairsWellCell.swift */,
 				F75C0B0720C597D4002FD5E6 /* Main.storyboard */,
 				F7913B8820D1AD5A00AEB366 /* Colors  */,
 			);
@@ -175,8 +174,8 @@
 				F75C0B1D20C5B0F7002FD5E6 /* WineSearchViewController.swift */,
 				F789556720C8556B0017AF3D /* AddWineViewController.swift */,
 				F789555F20C845610017AF3D /* WineCellarViewController.swift */,
-				F7A6D79120D9AEE800D86B33 /* MapViewController.swift */,
-				F7A6D79520D9C2E600D86B33 /* LocationSearchTableController.swift */,
+				F7B7428E20DACF4E002BD0AE /* RandomWineViewController.swift */,
+				F7B7429620DAFB10002BD0AE /* MapKit+locationTableView */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -208,11 +207,52 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F7B7429020DAE198002BD0AE /* SearchedWineCells */ = {
+			isa = PBXGroup;
+			children = (
+				F7913B7D20CB19A500AEB366 /* OverviewTableViewCell.swift */,
+				F7913B8320CB39BF00AEB366 /* PairsWellCell.swift */,
+			);
+			path = SearchedWineCells;
+			sourceTree = "<group>";
+		};
+		F7B7429520DAE3E9002BD0AE /* RandomWineCells */ = {
+			isa = PBXGroup;
+			children = (
+				F7B7429120DAE1F4002BD0AE /* RandomWineOverviewCell.swift */,
+				F7B7429320DAE21A002BD0AE /* RandomWinePairsWithCell.swift */,
+			);
+			path = RandomWineCells;
+			sourceTree = "<group>";
+		};
+		F7B7429620DAFB10002BD0AE /* MapKit+locationTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F7A6D79120D9AEE800D86B33 /* MapViewController.swift */,
+				F7A6D79520D9C2E600D86B33 /* LocationSearchTableController.swift */,
+			);
+			path = "MapKit+locationTableView";
+			sourceTree = "<group>";
+		};
+		F7B7429720DAFBED002BD0AE /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				F75C0B0A20C597D5002FD5E6 /* Assets.xcassets */,
+				F7B7429820DAFBEF002BD0AE /* background.gif */,
+				F789556B20C89F460017AF3D /* UIImage+Gif.swift */,
+				F7A6D78B20D8464500D86B33 /* KeyBoardExtension.swift */,
+				F75C0B0C20C597D5002FD5E6 /* LaunchScreen.storyboard */,
+				F75C0B0F20C597D5002FD5E6 /* Info.plist */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
 		F7BCB63620D41E15006C4573 /* WineCellarCells */ = {
 			isa = PBXGroup;
 			children = (
 				F7BCB63220D41DF8006C4573 /* SummaryCell.swift */,
 				F7BCB63420D41E0A006C4573 /* NotesCell.swift */,
+				F789556120C847890017AF3D /* CellarCollectionViewCell.swift */,
 			);
 			path = WineCellarCells;
 			sourceTree = "<group>";
@@ -318,10 +358,13 @@
 				F7913B8420CB39BF00AEB366 /* PairsWellCell.swift in Sources */,
 				F789556220C847890017AF3D /* CellarCollectionViewCell.swift in Sources */,
 				F7913B8720D1AB6800AEB366 /* Colors.swift in Sources */,
+				F7B7429220DAE1F4002BD0AE /* RandomWineOverviewCell.swift in Sources */,
 				F7BCB63320D41DF8006C4573 /* SummaryCell.swift in Sources */,
 				F789556C20C89F460017AF3D /* UIImage+Gif.swift in Sources */,
 				F75C0B2420C60A40002FD5E6 /* DetailBeverageViewController.swift in Sources */,
+				F7B7429420DAE21A002BD0AE /* RandomWinePairsWithCell.swift in Sources */,
 				F7BCB63920D7250F006C4573 /* Model.xcdatamodeld in Sources */,
+				F7B7428F20DACF4F002BD0AE /* RandomWineViewController.swift in Sources */,
 				F7BCB64020D805EB006C4573 /* User.swift in Sources */,
 				F7913B7E20CB19A500AEB366 /* OverviewTableViewCell.swift in Sources */,
 				F75C0B1C20C5A3EE002FD5E6 /* WineCell.swift in Sources */,
@@ -329,7 +372,6 @@
 				F75C0B2220C5D5DB002FD5E6 /* BeverageController .swift in Sources */,
 				F7A6D79620D9C2E600D86B33 /* LocationSearchTableController.swift in Sources */,
 				F789556620C84B9D0017AF3D /* WineController .swift in Sources */,
-				F75C0B1820C59A60002FD5E6 /* CustomTabBarView.swift in Sources */,
 				F789556820C8556B0017AF3D /* AddWineViewController.swift in Sources */,
 				F789556020C845610017AF3D /* WineCellarViewController.swift in Sources */,
 				F789556A20C89C8C0017AF3D /* LoginViewController.swift in Sources */,
@@ -484,7 +526,7 @@
 				CODE_SIGN_ENTITLEMENTS = alphaWine/alphaWine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X5NURS3PH;
-				INFOPLIST_FILE = alphaWine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/alphaWine/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +545,7 @@
 				CODE_SIGN_ENTITLEMENTS = alphaWine/alphaWine.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4X5NURS3PH;
-				INFOPLIST_FILE = alphaWine/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/alphaWine/resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

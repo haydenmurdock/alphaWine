@@ -48,7 +48,6 @@ class DetailBeverageViewController: UIViewController, UITableViewDataSource, UIT
         backButton.backgroundColor = Colors.darkGreen
         addNoteButton.layer.cornerRadius = 10
         cancelNoteButton.layer.cornerRadius = 10
-        
         guard let beverage = beverage else {return}
         BeverageController.shared.fetchBeverageImage(with: beverage) { (image) in
             if let image = image {
@@ -65,6 +64,7 @@ class DetailBeverageViewController: UIViewController, UITableViewDataSource, UIT
                 let wineColorText = beverage.secondary_category!.replacingOccurrences(of: "Wine", with: "")
                     self.wineColorIcon = wineColorText
                     self.wineColorLabel.text = "Color: \(wineColorText)"
+        
                 }
             }
         }
@@ -223,6 +223,18 @@ class DetailBeverageViewController: UIViewController, UITableViewDataSource, UIT
 }
     
     @IBAction func pinButtonPressed(_ sender: Any) {
+        print("pin pushed")
+        
+    
+    }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toMapKitVC" {
+            let VC = segue.destination as! UINavigationController
+            let mapVC = VC.topViewController as! MapViewController
+            mapVC.beverage = beverage
+            print("")
+        }
     }
     
    @objc func openCloseCell(_ button: UIButton){

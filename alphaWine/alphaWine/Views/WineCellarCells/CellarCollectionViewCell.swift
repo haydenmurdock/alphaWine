@@ -21,6 +21,9 @@ class CellarCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewForCell: UIView!
     
     func updateCell(with wine: Wine){
+        
+        summaryTextView.layer.cornerRadius = 10
+        notesTextView.layer.cornerRadius = 10
         wineNameLabel.text = wine.name
         updateWineImage(with: wine.color!)
         overViewLabel.backgroundColor = Colors.darkGreen
